@@ -31,7 +31,14 @@ resource "aws_instance" "ec2" {
     security_groups = [ "${aws_security_group.sg-ec2.name}" ]
     tags = {
       "Name" ="EC2-instance" 
-    }
+    } 
+}
 
+# Create an SNS Topic
+resource "aws_sns_topic" "name" {
+    name= "note"
+    lambda_success_feedback_sample_rate= "100"
+    lambda_success_feedback_role_arn = "PASTE YOUR ARN ROLE HERE"
+    lambda_failure_feedback_role_arn = "PASTE YOUR ARN ROLE HERE"
   
 }

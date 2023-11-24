@@ -29,3 +29,20 @@
 * output
 
 
+<h6>Steps to create customer inline policy for CloudWatch Logs </h6>
+
+* Go to the IAM service
+
+* Click on **Role**
+
+* Click on **create a role**
+
+* Choose **AWS service**
+
+* Use case : **SNS**
+
+* Give a role a name
+
+* Create a role
+
+* Copy the role **ARN**
